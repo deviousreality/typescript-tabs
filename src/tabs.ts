@@ -5,23 +5,21 @@ interface NavTabOptions {
   contentItemClass?: string
   navigationClass?: string,
   navigationItemClass?: string,
-  navigationItemClickClass? : string
+  navigationItemClickClass?: string
 }
 
-module UI {
+namespace UI {
 
-    class tabObject {
+    class TabObject {
         public navigationContainerClass: string = '.m-nav-tabs';
         public navigationItemClass: string = '.m-nav-item';
         public navigationItemClickClass: string = '.m-nav-itemlink';
         public contentClass: string = '.m-tab-content';
         public contentItemClass: string = '.m-tab-pane';
         public activeClass: string = '.is-active';
-        
+
         private hideClass: string = '.u-hide';
         private showClass: string = '.u-show';
-
-        private 
 
         private element: Element;
         private activeIndex: number = 0;
@@ -104,13 +102,13 @@ module UI {
 
     }
 
-    export module tabWidget {
+    export namespace TabWidget {
         let tabs = [];
 
         export function initTabs(selector: string, options?: NavTabOptions) {
             let elements = document.querySelectorAll(selector);
             for (let i = 0; i < elements.length; i++) {
-                tabs.push(new tabObject(elements[i]));
+                tabs.push(new TabObject(elements[i]));
             }
         }
 
@@ -140,12 +138,12 @@ module UI {
                 }
             }
         }
-    }  
+    }
 }
- 
+
 (() => {
-  UI.tabWidget.initTabs(".m-tabs");
-  //UI.tabWidget.gotoTab('#foo', 1);
-  UI.tabWidget.removeTabs("#foo");
-  UI.tabWidget.restoreTabs("#foo");  
+  UI.TabWidget.initTabs(".m-tabs");
+  // UI.tabWidget.gotoTab('#foo', 1);
+  UI.TabWidget.removeTabs("#foo");
+  UI.TabWidget.restoreTabs("#foo");
 })();
