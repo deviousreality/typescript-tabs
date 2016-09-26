@@ -1,0 +1,48 @@
+<html>
+    <head>
+    <title>Typescript Tabs</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./src/tabs.js"></script>
+    </head>
+
+<div style="margin: 2rem;">
+
+<div id="tabs" class="m-tabs">
+    <ul class="m-nav m-nav-tabs">
+        <li class="m-nav-item"><span class="m-nav-itemlink">Tab 1</span></li>
+        <li class="m-nav-item"><span class="m-nav-itemlink">Tab 2</span></li>
+        <li class="m-nav-item"><span class="m-nav-itemlink">Tab 3 with long text</span></li>
+    </ul>
+    <div id="content1" class="m-tab-content">
+        <div class="m-tab-pane m-detailbox-body"><p>He says the restraining bolt has short circuited his recording system.</p></div>
+        <div class="m-tab-pane m-detailbox-body"><p>Red Leader... This is Gold Leader. We're starting out attack run. </p></div>
+        <div class="m-tab-pane m-detailbox-body"><p>Stand by, Chewie, here we go. Cut in the sublight engines. What the...?</p></div>
+    </div>
+</div>
+
+<br /><br />
+
+    <div id="foo" class="m-tabs">
+        <ul class="m-nav m-nav-tabs">
+            <li class="m-nav-item"><span class="m-nav-itemlink">Tab 1</span></li>
+            <li class="m-nav-item"><span class="m-nav-itemlink">Tab 2</span></li>
+            <li class="m-nav-item"><span class="m-nav-itemlink">Tab 3 with long text</span></li>
+        </ul>
+        <div id="content2" class="m-tab-content">
+            <div class="m-tab-pane m-detailbox-body"><p>He says the restraining bolt has short circuited his recording system.</p></div>
+            <div class="m-tab-pane m-detailbox-body"><p>Red Leader... This is Gold Leader. We're starting out attack run. </p></div>
+            <div class="m-tab-pane m-detailbox-body"><p>Stand by, Chewie, here we go. Cut in the sublight engines. What the...?</p></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    (() => {   
+        UI.tabWidget.initTabs(".m-tabs");
+        //UI.tabWidget.gotoTab('#foo', 1);
+        //UI.tabWidget.removeTabs("#foo");
+        //UI.tabWidget.restoreTabs("#foo");
+    })();    
+</script>
+</html>

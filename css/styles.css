@@ -1,0 +1,80 @@
+
+/* Navigation */
+.m-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.m-nav::after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+.m-nav::before {
+  display: table;
+  content: " ";
+}
+
+.m-nav > li {
+  position: relative;
+  display: block;
+}
+
+.m-nav > li > .m-nav-itemlink {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.m-nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+
+.m-nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+.m-nav-tabs > li > .m-nav-itemlink {
+  margin-right: 2px;
+  line-height: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+.m-nav-tabs > li > .m-nav-itemlink:hover {
+  background-color: #ddd;
+}
+
+.m-nav-tabs > li.is-active > .m-nav-itemlink {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+/* Tabs */
+.m-tab-content {
+  display: block;
+}
+
+.m-tab-pane {
+  display: none;
+}
+.m-tab-pane.is-active {
+  display: block;
+}
+
+.m-box-body {
+  padding: 2rem 2rem 0;
+  min-height: 4rem;
+}
+
+.u-hide {
+  display: none;
+}
+
+.u-show {
+  display: block;
+}
